@@ -10,5 +10,54 @@
 <body>
     <py-script type="py" src="main.py"></py-script>
     
+<br><br>
+
+    <div class="container bg-info">
+        <h1 class="text-center text-light fst-italic" id="head1"></h1>
+        <h1 text-light>Basic Calculator</h1>
+
+<form action="#">
+        <label for="num1">Enter first number:</label>
+        <br>
+        <input type="number" id="num1" class="form-control" placeholder="Number" required>
+
+        <br><br>
+
+        <label for="num2">Enter second number:</label>
+        <br>
+        <input type="number" id="num2" class="form-control" placeholder="Number" required>
+
+        <br><br>
+
+        <button type="submit" class="btn btn-info" onmouseover="calculate()">Calculate
+        </button>   
+
+    </form>
+<p id="display" class="text-center display-6"></p>
+    <script>
+        function calculate(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var sum = Number(num1) + Number(num2);
+            var product = Number(num1) * Number(num2);
+            var difference = Number(num1) - Number(num2);
+            
+            //alert("The sum of 2 numbers is: " + sum + "\n" + "Is num1 greater than or equal to num2? " + compare); //concatenation
+            document.getElementById('display').innerHTML = "The sum of 2 numbers is: " + sum + "<br>" + "The product of 2 numbers is: " + product + "<br>" + "The difference of 2 numbers is: " + difference;
+        }
+    
+    document.getElementById('instruct').innerHTML = "Enter any number to calculate";
+</script>
+
+    <br>
+   <!-- <button type="button" class="btn btn-primary" onclick="alert(num1);">Answer</button>
+
+    <br><br>
+
+    <button type="button" class="btn btn-info" onclick="document.write(num1);">Answer</button>
+
+    <br><br>-->
+    </script>
+        </div>
 </body>
 </html>
